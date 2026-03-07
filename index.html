@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Mujeeb Awan | Electrical Engineer</title>
+    <meta name="description" content="Portfolio of Muhammad Mujeeb Awan - Photonics Research, Embedded Systems, Edge AI">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ═══════════════ NAV ═══════════════ -->
+<nav>
+    <div class="nav-inner">
+        <span class="logo">M. Mujeeb Awan</span>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#research">Research</a>
+            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+</nav>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="hero">
+    <h1>Muhammad Mujeeb Awan</h1>
+    <p class="subtitle">MS Electrical Engineering, NUST, Pakistan</p>
+    <div class="contact-links">
+        <a href="mailto:mawan.msee24seecs@seecs.edu.pk">mawan.msee24seecs@seecs.edu.pk</a>
+        &middot;
+        <a href="mailto:mujeebciit72@gmail.com">mujeebciit72@gmail.com</a>
+    </div>
+    <div class="highlight-bar">
+        Photonics &middot; Embedded Systems &middot; Edge AI &middot;
+        <strong>69% CE Grating Coupler on SiN</strong>
+    </div>
+</section>
+
+<!-- ═══════════════ ABOUT ═══════════════ -->
+<div id="about" class="section">
+    <h2>About</h2>
+    <p class="about-text">
+        Electrical engineer with 3+ years of industry experience in embedded systems and FPGA design,
+        currently pursuing MS at NUST with research in silicon nitride photonics. My thesis focuses on
+        designing a high-efficiency apodized focusing grating coupler, achieving 69.1% coupling efficiency
+        &mdash; currently being fabricated at LAAS-CNRS, France. I combine strong hardware engineering
+        fundamentals with hands-on simulation, edge AI deployment, and photonic device design.
+    </p>
+</div>
+
+<!-- ═══════════════ RESEARCH ═══════════════ -->
+<div class="section-alt">
+<div id="research" class="section">
+    <h2>Research</h2>
+
+    <div class="project-grid">
+        <div class="project-card">
+            <div class="card-body">
+                <h3>High-Efficiency Apodized Focusing Grating Coupler on Silicon Nitride</h3>
+                <p class="card-meta">MS Thesis &middot; NUST &middot; Supervisor: Dr. Usman Zabit &middot; Oct 2024 &ndash; Present</p>
+                <p>
+                    Designed an apodized focusing grating coupler (FGC) on a 300 nm silicon nitride platform
+                    for fiber-to-chip coupling at 1550 nm. The device uses a single full-etch process with
+                    SiO<sub>2</sub>/PMMA cladding, achieving <strong>69.1% coupling efficiency (&minus;1.61 dB)</strong>
+                    to SMF-28 fiber &mdash; a 43% improvement over the uniform baseline (48%).
+                </p>
+                <p style="margin-top: 0.5rem;">
+                    The apodization ramps the duty cycle from 12.5% to 25% across 260 grating teeth (21 sections)
+                    to shape the radiated field for optimal Gaussian mode matching. A parametric sweep of
+                    <strong>1,472 FEXEN electromagnetic simulations</strong> was conducted to construct the
+                    effective index lookup table. The complete design-to-GDS pipeline was developed in MATLAB
+                    (3,000+ lines). The device is currently being <strong>fabricated at LAAS-CNRS, Toulouse, France</strong>.
+                </p>
+                <div class="card-tags">
+                    <span class="tag">Silicon Nitride</span>
+                    <span class="tag">Grating Coupler</span>
+                    <span class="tag">FEXEN</span>
+                    <span class="tag">MATLAB</span>
+                    <span class="tag">Phase Matching</span>
+                    <span class="tag">Apodization</span>
+                    <span class="tag">GDS Layout</span>
+                    <span class="tag">KLayout</span>
+                    <span class="tag">Angular Spectrum</span>
+                </div>
+            </div>
+            <div class="card-images">
+                <img src="images/efield_propagation.png" alt="E-field propagation from grating surface showing beam focusing at fiber height">
+                <img src="images/ce_breakdown.png" alt="Coupling efficiency breakdown: simulated beam vs SMF-28 fiber mode">
+                <img src="images/gds_layout.png" alt="Fabrication-ready GDS layout with 260 curved teeth">
+            </div>
+            <div class="card-images" style="padding-bottom: 1rem;">
+                <img src="images/sim_results.png" alt="Simulation results summary for best design">
+                <img src="images/neff_sweep.png" alt="Parametric neff sweep results across pitch and duty cycle">
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-top: 1.2rem;">
+        <h3 style="font-size: 1rem; color: #003366;">International Collaboration</h3>
+        <p style="font-size: 0.9rem; color: #444; margin-top: 0.3rem;">
+            <strong>LAAS-CNRS, Toulouse, France</strong> &mdash; Device fabrication.<br>
+            <strong>University of M&aacute;laga, Spain</strong> &mdash; Reference layout code (Robert Halir); 3 critical bugs identified and fixed.
+        </p>
+    </div>
+</div>
+</div>
+
+<!-- ═══════════════ PROJECTS ═══════════════ -->
+<div id="projects" class="section">
+    <h2>Projects</h2>
+
+    <div class="project-grid">
+
+        <!-- Face Recognition -->
+        <div class="project-card">
+            <div class="card-body">
+                <h3>Face Recognition Security System</h3>
+                <p class="card-meta">NVIDIA Jetson AGX Orin 64GB &middot; 2025 &middot; Best Project Award, NUST</p>
+                <p>
+                    Production-ready real-time face detection and recognition system deployed on NVIDIA Jetson AGX Orin.
+                    GPU-accelerated SCRFD detection with TensorRT FP16 optimization (25-30 FPS), FAISS GPU for
+                    sub-millisecond similarity search across 1000+ faces. Features multi-face tracking, RTSP camera
+                    integration (Hikvision), FastAPI backend with WebSocket real-time alerts, and a complete
+                    web dashboard with JWT authentication.
+                </p>
+                <div class="card-tags">
+                    <span class="tag">TensorRT</span>
+                    <span class="tag">FAISS</span>
+                    <span class="tag">FastAPI</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">CUDA</span>
+                    <span class="tag">SCRFD</span>
+                    <span class="tag">WebSocket</span>
+                    <span class="tag">RTSP</span>
+                    <span class="tag">Jetson AGX Orin</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tank Detection -->
+        <div class="project-card">
+            <div class="card-body">
+                <h3>Tank Detection &amp; Classification</h3>
+                <p class="card-meta">NVIDIA Jetson Xavier 16GB &middot; 2026</p>
+                <p>
+                    Military tank detection, classification, and parts identification system for edge deployment.
+                    Three YOLOv8 Nano models (6 MB each): tank classifier (8 types, 81% mAP), parts detector
+                    (turret, tracks, hatch), and aerial/drone target detector (89% mAP). Supports both
+                    ground-level and aerial feeds with a two-stage pipeline for target lock and part identification.
+                </p>
+                <div class="card-tags">
+                    <span class="tag">YOLOv8</span>
+                    <span class="tag">Edge AI</span>
+                    <span class="tag">Jetson Xavier</span>
+                    <span class="tag">Object Detection</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Ultralytics</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Frequency Detection -->
+        <div class="project-card">
+            <div class="card-body">
+                <h3>Frequency Detection System</h3>
+                <p class="card-meta">ESP32 &middot; 2024</p>
+                <p>
+                    Real-time frequency detection system using ESP32 with INMP microphone. FFT analysis detects
+                    frequencies up to 10 kHz with both 1-second and 4-second windows. Includes a fire alarm
+                    trigger for the 3000&ndash;3500 Hz range and serves JSON data via HTTP API for remote monitoring.
+                </p>
+                <div class="card-tags">
+                    <span class="tag">ESP32</span>
+                    <span class="tag">FFT</span>
+                    <span class="tag">C++</span>
+                    <span class="tag">IoT</span>
+                    <span class="tag">Embedded</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Automobile Black Box -->
+        <div class="project-card">
+            <div class="card-images">
+                <img src="images/blackbox_diagram.jpg" alt="Automobile Black Box system architecture">
+                <img src="images/blackbox_hardware.png" alt="Automobile Black Box hardware prototype">
+            </div>
+            <div class="card-body">
+                <h3>Automobile Black Box</h3>
+                <p class="card-meta">BS Final Year Project &middot; CUI Wah &middot; 2021</p>
+                <p>
+                    IoT-based vehicle data logging system using ESP32 with SIM808 GPS/GSM module.
+                    Tracks speed, fuel levels, and GPS location with real-time SMS alerts.
+                    Features SD card data storage, accident detection, anti-theft monitoring,
+                    and smart battery management.
+                </p>
+                <div class="card-tags">
+                    <span class="tag">ESP32</span>
+                    <span class="tag">GPS</span>
+                    <span class="tag">GSM</span>
+                    <span class="tag">IoT</span>
+                    <span class="tag">C++</span>
+                    <span class="tag">PCB Design</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- ═══════════════ EXPERIENCE ═══════════════ -->
+<div class="section-alt">
+<div id="experience" class="section">
+    <h2>Experience</h2>
+
+    <div class="timeline-item">
+        <h3>Embedded Systems Engineer</h3>
+        <p class="meta">National Radio Telecommunication Corporation (NRTC), Islamabad &middot; Apr 2022 &ndash; Present</p>
+        <p>
+            FPGA digital design (Verilog, Xilinx Vivado), embedded software (C/C++, FreeRTOS on ESP32/STM32),
+            GPU-accelerated AI deployment on NVIDIA Jetson platforms, PCB design, and communication protocol
+            implementation (UART, SPI, I2C, CAN, Ethernet).
+        </p>
+    </div>
+
+    <div class="timeline-item">
+        <h3>Lab Engineer</h3>
+        <p class="meta">Air University, Islamabad &middot; Sep 2021 &ndash; Apr 2022</p>
+        <p>
+            Conducted lab sessions for undergraduate EE courses in embedded systems, digital design,
+            and microcontroller programming.
+        </p>
+    </div>
+
+    <div class="timeline-item">
+        <h3>Internee Engineer</h3>
+        <p class="meta">National Electronic Complex of Pakistan (NECOP), Islamabad &middot; Jul &ndash; Sep 2021</p>
+        <p>
+            Designed energy-efficient arithmetic units for FPGA-based hardware accelerators using Verilog.
+        </p>
+    </div>
+</div>
+</div>
+
+<!-- ═══════════════ EDUCATION ═══════════════ -->
+<div id="education" class="section">
+    <h2>Education</h2>
+
+    <div class="timeline-item">
+        <h3>MS Electrical Engineering</h3>
+        <p class="meta">National University of Sciences and Technology (NUST), Islamabad &middot; Sep 2024 &ndash; Present &middot; CGPA: 3.56/4.00</p>
+        <p>
+            Thesis: High-Efficiency Apodized Focusing Grating Coupler on Silicon Nitride Platform (Supervisor: Dr. Usman Zabit)<br>
+            Courses: Photonic Integrated Circuits (A), Linear System Theory (A), Advanced Embedded System Design (A),
+            Machine Learning, Deep Learning, Computer Vision
+        </p>
+    </div>
+
+    <div class="timeline-item">
+        <h3>BS Electrical Engineering</h3>
+        <p class="meta">COMSATS University Islamabad (CUI), Wah Campus &middot; Sep 2017 &ndash; Jul 2021 &middot; CGPA: 3.44/4.00</p>
+        <p>FYP: Automobile Black Box (IoT-based vehicle tracking and data logging system)</p>
+    </div>
+</div>
+
+<!-- ═══════════════ AWARDS ═══════════════ -->
+<div class="section-alt">
+<div class="section">
+    <h2>Awards</h2>
+    <ul class="awards-list">
+        <li><span>Best Project Award &mdash; Computer Vision, NUST</span><span class="year">2025</span></li>
+        <li><span>1st Position &mdash; National Robotics Competition, Visio Spark</span><span class="year">2019</span></li>
+        <li><span>3rd Position &mdash; Annual Exhibition of Final Year Projects, CUI Wah</span><span class="year">2021</span></li>
+        <li><span>Academic Excellence Award &mdash; 2nd &amp; 8th Semester, CUI Wah</span><span class="year">2018, 2021</span></li>
+    </ul>
+</div>
+</div>
+
+<!-- ═══════════════ SKILLS ═══════════════ -->
+<div id="skills" class="section">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+        <div class="skill-group">
+            <h4>Photonics &amp; Simulation</h4>
+            <div class="tags">
+                <span class="tag">FEXEN EM Solver</span>
+                <span class="tag">Angular Spectrum</span>
+                <span class="tag">Phase Matching</span>
+                <span class="tag">KLayout (GDS)</span>
+                <span class="tag">MATLAB</span>
+            </div>
+        </div>
+        <div class="skill-group">
+            <h4>Programming</h4>
+            <div class="tags">
+                <span class="tag">C/C++</span>
+                <span class="tag">Python</span>
+                <span class="tag">MATLAB</span>
+                <span class="tag">Verilog</span>
+                <span class="tag">Assembly</span>
+            </div>
+        </div>
+        <div class="skill-group">
+            <h4>Embedded &amp; FPGA</h4>
+            <div class="tags">
+                <span class="tag">ESP32</span>
+                <span class="tag">STM32</span>
+                <span class="tag">Xilinx Vivado</span>
+                <span class="tag">FreeRTOS</span>
+                <span class="tag">PCB Design</span>
+                <span class="tag">UART/SPI/I2C/CAN</span>
+            </div>
+        </div>
+        <div class="skill-group">
+            <h4>AI &amp; Computer Vision</h4>
+            <div class="tags">
+                <span class="tag">TensorRT</span>
+                <span class="tag">YOLOv8</span>
+                <span class="tag">FAISS</span>
+                <span class="tag">OpenCV</span>
+                <span class="tag">PyTorch</span>
+                <span class="tag">NVIDIA Jetson</span>
+            </div>
+        </div>
+        <div class="skill-group">
+            <h4>Tools</h4>
+            <div class="tags">
+                <span class="tag">Git/GitHub</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">LaTeX</span>
+                <span class="tag">Docker</span>
+                <span class="tag">Linux</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════ CONTACT ═══════════════ -->
+<div class="section-alt">
+<div id="contact" class="section" style="text-align: center; padding-bottom: 3rem;">
+    <h2 style="display: inline-block;">Contact</h2>
+    <p style="margin-top: 1rem; font-size: 0.95rem;">
+        <strong>Email:</strong>
+        <a href="mailto:mawan.msee24seecs@seecs.edu.pk">mawan.msee24seecs@seecs.edu.pk</a>
+        &middot;
+        <a href="mailto:mujeebciit72@gmail.com">mujeebciit72@gmail.com</a><br>
+        <strong>Phone:</strong> (+92) 316 223 4550<br>
+        <strong>Location:</strong> Islamabad, Pakistan
+    </p>
+</div>
+</div>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer>
+    &copy; 2026 Muhammad Mujeeb Awan &middot;
+    <a href="mailto:mujeebciit72@gmail.com">mujeebciit72@gmail.com</a>
+</footer>
+
+</body>
+</html>
