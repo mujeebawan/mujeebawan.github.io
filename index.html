@@ -101,7 +101,7 @@
         <h3 style="font-size: 1rem; color: #003366;">International Collaboration</h3>
         <p style="font-size: 0.9rem; color: #444; margin-top: 0.3rem;">
             <strong>LAAS-CNRS, Toulouse, France</strong> &mdash; Device fabrication.<br>
-            <strong>University of M&aacute;laga, Spain</strong> &mdash; Reference layout code (Robert Halir); 3 critical bugs identified and fixed.
+            <strong>University of M&aacute;laga, Spain</strong> &mdash; Collaboration on focusing grating coupler layout methodology (Robert Halir).
         </p>
     </div>
 </div>
@@ -144,6 +144,39 @@
             <div class="card-images">
                 <img src="images/frs_admin.jpeg" alt="Admin panel with person enrollment and watchlist management">
                 <img src="images/frs_alert_page.jpeg" alt="Alert management page with filtering, threat levels, and guard verification">
+            </div>
+        </div>
+
+        <!-- NUST Chatbot -->
+        <div class="project-card">
+            <div class="card-body">
+                <h3>NUST Admissions Chatbot &mdash; Offline RAG
+                    <a href="https://github.com/mujeebawan/NUST-Chatbot" style="font-size: 0.85rem; margin-left: 0.5rem; color: #2E86C1;">GitHub &rarr;</a>
+                </h3>
+                <p class="card-meta">CPU-Only Deployment &middot; 2026 &middot; NUST Local Chatbot Competition</p>
+                <p>
+                    An offline retrieval-augmented generation (RAG) chatbot for NUST admissions guidance.
+                    Runs entirely on consumer hardware &mdash; no GPU, no cloud, no internet after initial setup.
+                    Processes 74 Q&amp;A pairs and 12 official PDFs (1,070 indexed documents) through a FAISS
+                    vector store, retrieves the top-5 relevant chunks, and generates grounded answers using
+                    a quantized Qwen2.5-3B model (4-bit, ~2 GB) via CPU inference.
+                </p>
+                <p style="margin-top: 0.5rem;">
+                    The system explicitly states knowledge gaps rather than hallucinating, displays source
+                    documents for transparency, and runs on just 4&ndash;6 GB RAM. Built with LangChain for
+                    pipeline orchestration, llama-cpp-python for inference, and Gradio for the web interface.
+                </p>
+                <div class="card-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">LangChain</span>
+                    <span class="tag">FAISS</span>
+                    <span class="tag">Qwen2.5-3B</span>
+                    <span class="tag">GGUF Quantization</span>
+                    <span class="tag">llama-cpp</span>
+                    <span class="tag">Gradio</span>
+                    <span class="tag">RAG</span>
+                    <span class="tag">Offline AI</span>
+                </div>
             </div>
         </div>
 
